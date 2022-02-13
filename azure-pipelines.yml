@@ -38,6 +38,6 @@ stages:
         containerRegistry: 'openshift-image-registry'
         repository: '$(project-name-dev)/$(image-repository-dev)'
         command: 'build'
-        Dockerfile: 'webapp2/Dockerfile'
+        Dockerfile: 'Dockerfile'
         buildContext: '.'
         tags: '$(tag)'
