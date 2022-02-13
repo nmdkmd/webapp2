@@ -24,7 +24,7 @@ stages:
       name: caCertificate
       displayName: 'Download CA certificate'
       inputs:
-        secureFile: 'tls.crt'
+        secureFile: 'tls-image-registry.crt'
     - script: |
         echo Installing $(caCertificate.secureFilePath) to the trusted CA
         sudo chown root:root $(caCertificate.secureFilePath)
