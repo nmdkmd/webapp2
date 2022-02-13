@@ -10,9 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-tag: '$(Build.BuildId)'
-project-name-dev: nmd-test-imgrepo
-image-repository-dev: test-app
+ tag: '$(Build.BuildId)'
+ project-name-dev: nmd-test-imgrepo
+ image-repository-dev: test-app
 
 steps:
 - script: echo Hello, world!
