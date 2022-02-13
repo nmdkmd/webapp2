@@ -41,3 +41,10 @@ stages:
         Dockerfile: 'Dockerfile'
         buildContext: '.'
         tags: '$(tag)'
+    - task: Docker@2
+      displayName: 'Docker Push Image'
+      inputs:
+        containerRegistry: 'openshift-image-registry'
+        repository: '$(project-name-dev)/$(image-repository-dev)'
+        command: 'push'
+        tags: '$(tag)'
